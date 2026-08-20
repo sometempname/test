@@ -24,6 +24,9 @@ jobs:
       - name: Install dependencies
         run: pip install requests beautifulsoup4 urllib3
 
+      - name: Show runner IP
+        run: curl ifconfig.me
+
       - name: Run fleet sender
         env:
           GAME_USERNAME: ${{ secrets.GAME_USERNAME }}
