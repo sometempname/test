@@ -1,0 +1,31 @@
+name: Fleet sender
+
+on:
+  schedule:
+    - cron: '0 * * * *'     # runs at minute 0 of every hour
+  workflow_dispatch:         # allows manual run from Actions tab
+
+concurrency:
+  group: fleet-sender
+  cancel-in-progress: true   # kill previous run when a new one starts
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4 urllib3
+
+      - name: Run fleet sender
+        env:
+          GAME_USERNAME: ${{ secrets.GAME_USERNAME }}
+          GAME_PASSWORD: ${{ secrets.GAME_PASSWORD }}
+        run: python DS_git.py
