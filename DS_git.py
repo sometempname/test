@@ -24,7 +24,7 @@ DST_PLANET = 16
 
 # Ships to send: ship ID -> count
 SHIPS = {
-    210: 1
+    210: 400000
     # Add more as needed, e.g. 204: 2
 }
 
