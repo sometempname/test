@@ -2,7 +2,7 @@ name: Fleet sender
 
 on:
   schedule:
-    - cron: '*/5 * * * *'     # runs at minute 0 of every hour
+    - cron: '0 * * * *'     # runs at minute 0 of every hour
   workflow_dispatch:         # allows manual run from Actions tab
 
 concurrency:
