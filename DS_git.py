@@ -175,12 +175,12 @@ def main():
     )
 
 
-    NEW_IP = "114.5.1.4"
+    new_ip = "114.5.1.4"
     session = requests.Session()
     session.headers.update({
-    "User-Agent": USER_AGENT,
+    "User-Agent": user_agent,
     "Referer": BASE_URL,
-    "X-Forwarded-For": NEW_IP})
+    "X-Forwarded-For": new_ip})
     session.verify = False
 
 
