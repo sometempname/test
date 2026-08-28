@@ -174,9 +174,15 @@ def main():
         "(KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36"
     )
 
+
+    NEW_IP = "114.5.1.4"
     session = requests.Session()
-    session.headers.update({"User-Agent": user_agent, "Referer": BASE_URL})
+    session.headers.update({
+    "User-Agent": USER_AGENT,
+    "Referer": BASE_URL,
+    "X-Forwarded-For": NEW_IP})
     session.verify = False
+
 
     print("Logging in...")
     r = session.post(f"{BASE_URL}/index.php?page=login", data={
