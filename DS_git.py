@@ -14,18 +14,19 @@ BASE_URL = "https://ol.lstyxl.com"
 
 # Source coordinates
 SRC_GALAXY = 3
-SRC_SYSTEM = 341
-SRC_PLANET = 15
+SRC_SYSTEM = 456
+SRC_PLANET = 3
 
 # Destination coordinates
 DST_GALAXY = 3
-DST_SYSTEM = 341
+DST_SYSTEM = 456
 DST_PLANET = 16
 
 # Ships to send: ship ID -> count
 SHIPS = {
     #226: 10000
-    210:33333334
+    #210:33333334
+    204:125
     # Add more as needed, e.g. 204: 2
 }
 
