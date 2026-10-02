@@ -26,7 +26,7 @@ DST_PLANET = 16
 SHIPS = {
     #226: 10000
     #210:33333334
-    204:400
+    204:1200
     # Add more as needed, e.g. 204: 2
 }
 
