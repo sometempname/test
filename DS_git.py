@@ -13,13 +13,13 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 BASE_URL = "https://ol.lstyxl.com"
 
 # Source coordinates
-SRC_GALAXY = 3
-SRC_SYSTEM = 456
-SRC_PLANET = 3
+SRC_GALAXY = 5
+SRC_SYSTEM = 555
+SRC_PLANET = 15
 
 # Destination coordinates
-DST_GALAXY = 3
-DST_SYSTEM = 456
+DST_GALAXY = 5
+DST_SYSTEM = 555
 DST_PLANET = 16
 
 # Ships to send: ship ID -> count
